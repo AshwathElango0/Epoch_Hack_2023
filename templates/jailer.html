@@ -1,0 +1,63 @@
+<head>
+    <title>Jailer Review Page</title>
+</head>
+<style>
+    .Heading{
+        color :blue;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        transition: 0.5s;
+    }
+    .Heading:hover{
+        color: rgb(187, 37, 37);
+        font-family: 'Times New Roman', Times, serif;
+        opacity: 0.7;
+        font-weight: bold;
+    }
+    .screen_pic{
+        margin-left: 350px;
+        border-radius: 10px;
+        height: 300px;
+        width: 300px;
+        
+    }
+    .Hyperlink{
+        font-size: x-large;
+        color: orange;
+        margin-left: 540px;
+        transition: 0.5s;
+    }
+    .Hyperlink:hover{
+        font-size: x-large;
+        margin-left: 540px;
+        color: green;
+        opacity: 0.8;
+    }
+    .jailer_pic{
+        margin-left: 350px;
+        border-radius: 10px;
+        height: 300px;
+        width: 300px;
+    }
+    .jailer_pic_2{
+        margin-left: 300px;
+        border-radius: 10px;
+        height: 300px;
+        width: 300px;
+    }
+</style>
+<body bgcolor="grey">
+    <div>
+        <marquee class="Heading"><h1>Welcome to the feedback page for Jailer</h1></marquee>
+    </div>
+    <img class="jailer_pic" src="https://static.toiimg.com/thumb/msid-99576352,width-1280,resizemode-4/99576352.jpg" alt="Jailer pic">
+    <img class="jailer_pic_2" src="https://th-i.thgim.com/public/entertainment/movies/79insq/article67179935.ece/alternates/FREE_1200/HUKUM%20PLAIN.jpg" alt="Jailer pic">
+    <hr><br>
+    <form method="POST" action="/result_jailer">
+        <label for="button">Enter Rating(1-5) :  </label>
+        <input type="text" name="Rating" id="button"><br><br><br>
+        <label for="button">Enter Review :  </label>
+        <input type="text" name="Review" id="button"><br><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>

@@ -1,0 +1,56 @@
+<head>
+    <title>Jawan Review Page</title>
+</head>
+<style>
+    .Heading{
+        color :blue;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        transition: 0.5s;
+    }
+    .Heading:hover{
+        color: rgb(187, 37, 37);
+        font-family: 'Times New Roman', Times, serif;
+        opacity: 0.7;
+        font-weight: bold;
+    }
+    .screen_pic{
+        margin-left: 350px;
+        border-radius: 10px;
+        height: 300px;
+        width: 300px;  
+    }
+    .screen_pic_2{
+        margin-left: 350px;
+        border-radius: 10px;
+        height: 300px;
+        width: 300px; 
+    }
+    .Hyperlink{
+        font-size: x-large;
+        color: orange;
+        margin-left: 540px;
+        transition: 0.5s;
+    }
+    .Hyperlink:hover{
+        font-size: x-large;
+        margin-left: 540px;
+        color: green;
+        opacity: 0.8;
+    }
+</style>
+<body bgcolor="grey">
+    <div>
+        <marquee class="Heading"><h1>Welcome to the feedback page for Jawan</h1></marquee>
+    </div>
+    <img class="screen_pic" src="https://c.ndtvimg.com/2023-09/lc6i4kvg_alia-_625x300_03_September_23.jpg" alt="Jawan pic">
+    <img class="screen_pic_2" src="https://www.shutterstock.com/shutterstock/photos/208513204/display_1500/stock-vector-illustration-of-amar-jawan-jyoti-on-vintage-national-tricolors-background-for-th-of-august-208513204.jpg" alt="Jawan pic"
+    <hr><br>
+    <form method="POST" action="/result_jawan">
+        <label for="button">Enter Rating(1-5) :  </label>
+        <input type="text" name="Rating" id="button"><br>
+        <label for="button">Enter Review :  </label>
+        <input type="text" name="Review" id="button"><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>

@@ -1,0 +1,38 @@
+<head>
+    <title>IITH Movie Review Page</title>
+</head>
+<style>
+    .Heading{
+        color :blue;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        transition: 0.5s;
+    }
+    .Heading:hover{
+        color: rgb(187, 37, 37);
+        font-family: 'Times New Roman', Times, serif;
+        opacity: 0.7;
+        font-weight: bold;
+    }
+    .Thanks{
+        color:orangered;
+        font-family: Arial, Helvetica, sans-serif;
+        transition: 0.5s;
+    }
+    .Thanks:hover{
+        color:black;
+        opacity: 0.7;
+    }
+</style>
+<body bgcolor="grey">
+    <div>
+        <marquee class="Heading"><h1>Thank you for your feedback!</h1></marquee>
+    </div>
+    <hr><br>
+    <div>
+        <h2 class="Thanks">Your feedback has been processed! Our review database has been updated.</h2><br><hr><br>
+    </div>
+        <div>
+        {{t_ht|safe}}
+    </div>
+</body>
