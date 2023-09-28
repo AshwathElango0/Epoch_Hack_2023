@@ -17,6 +17,12 @@ def polarity_finder(db):                                                  #Using
 def review_tracker_jawan():                                                 #keeping track of sentiment for Jawan over time
     global pos, neg, neu, dfj
     l=len(dfj)
+    sum=0
+    for i in range(l):                                                      #finding average star rating
+        data=dfj.iloc[i, 1]
+        sum+=data
+    avg=sum/l
+    avg=round(avg, 2)
     for i in range(l):
         data=polarity_finder(dfj)
         if data['pos']>data['neg'] and data['pos']>data['neu']:
@@ -26,15 +32,21 @@ def review_tracker_jawan():                                                 #kee
         else:
             neu+=1
         if pos>neg and pos>neu:
-            return "POSITIVE REVIEWS! :)"
+            return f"POSITIVE REVIEWS! :) [Star rating : {avg}]"
         elif neg>pos and neg>neu:
-            return "Negative reviews so far :("
+            return f"Negative reviews so far :( [Star rating : {avg}]"
         else:
-            return "Neutral reviews so far :|"
+            return f"Neutral reviews so far :| [Star rating : {avg}]"
 
 def review_tracker_jailer():                                                #keeping track of sentiment for Jailer over time
     global pos, neg, neu, dfa
     l=len(dfja)
+    sum=0
+    for i in range(l):                                                          #finding average star rating
+        data=dfja.iloc[i, 1]
+        sum+=data
+    avg=sum/l
+    avg=round(avg, 2)
     for i in range(l):
         data=polarity_finder(dfja)
         if data['pos']>data['neg'] and data['pos']>data['neu']:
@@ -44,11 +56,11 @@ def review_tracker_jailer():                                                #kee
         else:
             neu+=1
         if pos>neg and pos>neu:
-            return "Positive reviews! :)"
+            return f"Positive reviews! :) [Star rating : {avg}]"
         elif neg>pos and neg>neu:
-            return "Negative reviews so far :("
+            return f"Negative reviews so far :( [Star rating : {avg}]"
         else:
-            return "Neutral reviews so far :|"
+            return f"Neutral reviews so far :| [Star rating : {avg}]"
 
 @app.route('/')                                                         #home page
 def home():
@@ -111,8 +123,6 @@ def result_jailer():
         table=df.head()
         t_ht=table.to_html(index=False)
     return render_template('jailer_result.html', t_ht=t_ht)
-
-
 
 if __name__ == "__main__":
     app.run(debug=True) 
